@@ -2,8 +2,10 @@ import "./DrumPad.scss";
 
 const DrumPad = () => {
 	return (
-		<div className="drum-pad">
-			<audio></audio>
+		<div className="pads">
+			<div className="drum-pad">
+				<audio></audio>
+			</div>
 		</div>
 	);
 };
