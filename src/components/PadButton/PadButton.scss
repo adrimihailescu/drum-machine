@@ -5,4 +5,12 @@
 	border-radius: 20px;
 	font-size: 30px;
 	color: magenta;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&.disabled {
+		cursor: not-allowed;
+	}
 }
