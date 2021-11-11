@@ -6,8 +6,8 @@ import "./DrumMachine.scss";
 const DrumMachine = ({ drumSet, drumStatus, setDrumStatus, setSoundType }) => {
 	return (
 		<div id="drum-machine" className="container">
-			<div id="display" className="pad"></div>
-			<DrumPad />
+			{/* <div id="display" className="pad"></div> */}
+			<DrumPad drumSet={drumSet} />
 			<div className="controls">
 				<PowerControl drumStatus={drumStatus} setDrumStatus={setDrumStatus} />
 				<SoundType drumSet={drumSet} setSoundType={setSoundType} />

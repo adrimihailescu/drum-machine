@@ -5,5 +5,7 @@
 	grid-gap: 5px;
 	background-color: red;
 	.controls {
+		display: flex;
+		align-items: center;
 	}
 }
