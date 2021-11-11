@@ -1,0 +1,11 @@
+.power {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #000;
+	color: red;
+
+	&.isActive {
+		color: lime;
+	}
+}
