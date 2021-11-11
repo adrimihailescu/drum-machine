@@ -2,10 +2,13 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: #000;
+	background-color: #fefdfc;
+	background-image: linear-gradient(315deg, #fefdfc 0%, #473146 74%);
 	color: red;
+	padding: 20px;
+	border-radius: 10px;
 
 	&.isActive {
-		color: lime;
+		color: magenta;
 	}
 }
