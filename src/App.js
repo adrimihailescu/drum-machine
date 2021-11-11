@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import DrumMachine from "./components/DrumMachine/DrumMachine";
 import Layout from "./components/Layout/Layout";
 import Header from "./components/Header/Header";
@@ -27,6 +27,23 @@ function App() {
 			drumsConfig: newActiveConfig,
 		});
 	};
+
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	const handleKeyDown = (event) => {
+		event.preventDefault();
+
+		const activeKey = drumSet.drumsConfig.find(
+			(button) => button.keyCode === event.keyCode
+		);
+
+		if (activeKey !== undefined) {
+			new Audio(activeKey.src).play();
+		}
+	};
+
+	useEffect(() => {
+		window.addEventListener("keydown", handleKeyDown);
+	}, [handleKeyDown]);
 
 	return (
 		<Layout className="App">
