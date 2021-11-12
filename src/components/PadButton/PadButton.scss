@@ -5,6 +5,13 @@
 	border-radius: 20px;
 	font-size: 30px;
 	color: darkturquoise;
+	transition: all 180ms ease;
+
+	&:active {
+		color: blue;
+		background-image: linear-gradient(15deg, #fefdfc 0%, #473146 74%);
+		transition: all 180ms ease;
+	}
 
 	&:hover {
 		cursor: pointer;

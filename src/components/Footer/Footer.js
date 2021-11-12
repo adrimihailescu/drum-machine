@@ -2,7 +2,7 @@ import "./Footer.scss";
 
 import React from "react";
 
-export const Footer = () => {
+const Footer = () => {
 	return (
 		<footer className="footer">
 			Made by
