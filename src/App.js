@@ -37,21 +37,14 @@ function App() {
 			(button) => button.keyCode === event.keyCode
 		);
 
-		if (!drumStatus) return;
-
 		if (activeKey) {
-			setPressedKey(activeKey.id);
-			new Audio(activeKey.src).play();
+			document.getElementById(activeKey.id).click();
 		}
 	};
 
 	useEffect(() => {
 		window.addEventListener("keydown", handleKeyDown);
-
-		return () => {
-			window.removeEventListener("keydown", handleKeyDown);
-		};
-	}, [drumStatus, handleKeyDown]);
+	}, [handleKeyDown]);
 
 	return (
 		<Layout className="App">

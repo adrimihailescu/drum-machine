@@ -19,11 +19,12 @@ const PadButton = ({
 
 	return (
 		<button
+			id={soundName}
 			className={`drum-pad ${!drumStatus ? "disabled" : ""}`}
 			onClick={buttonTrigger}
 		>
 			{text}
-			<audio ref={ref} src={source} />
+			<audio className="clip" id={text} ref={ref} src={source} />
 		</button>
 	);
 };
