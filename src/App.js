@@ -39,7 +39,7 @@ function App() {
 
 		if (!drumStatus) return;
 
-		if (activeKey !== undefined) {
+		if (activeKey) {
 			setPressedKey(activeKey.id);
 			new Audio(activeKey.src).play();
 		}

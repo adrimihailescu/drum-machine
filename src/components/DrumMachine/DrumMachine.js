@@ -22,12 +22,12 @@ const DrumMachine = ({
 
 			<div className="controls">
 				<PowerControl drumStatus={drumStatus} setDrumStatus={setDrumStatus} />
+				<Display pressedKey={pressedKey} />
 				<SoundType
 					drumSet={drumSet}
 					setPressedKey={setPressedKey}
 					setSoundType={setSoundType}
 				/>
-				<Display pressedKey={pressedKey} />
 			</div>
 		</div>
 	);

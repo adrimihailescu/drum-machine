@@ -1,6 +1,11 @@
 .footer {
 	color: white;
-	padding: 10px;
 	text-transform: capitalize;
 	font-size: 30px;
+	margin: 30px;
+	padding: 10px;
+	a {
+		text-decoration: none;
+		color: white;
+	}
 }
