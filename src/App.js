@@ -6,7 +6,7 @@ import Footer from "./components/Footer/Footer";
 import Drums from "./DrumModes";
 
 function App() {
-	const [pressedKey, setPressedKey] = useState();
+	const [pressedKey, setPressedKey] = useState("");
 	const [drumStatus, setDrumStatus] = useState(true);
 	const [drumSet, setDrumSet] = useState({
 		activeDrumSet: "Set 1",
@@ -40,7 +40,7 @@ function App() {
 		if (!drumStatus) return;
 
 		if (activeKey !== undefined) {
-			setPressedKey(activeKey.keyTrigger);
+			setPressedKey(activeKey.id);
 			new Audio(activeKey.src).play();
 		}
 	};
@@ -51,7 +51,7 @@ function App() {
 		return () => {
 			window.removeEventListener("keydown", handleKeyDown);
 		};
-	}, [drumStatus]);
+	}, [drumStatus, handleKeyDown]);
 
 	return (
 		<Layout className="App">
@@ -61,6 +61,8 @@ function App() {
 				drumStatus={drumStatus}
 				setDrumStatus={setDrumStatus}
 				setSoundType={setSoundType}
+				setPressedKey={setPressedKey}
+				pressedKey={pressedKey}
 			/>
 			<Footer />
 		</Layout>

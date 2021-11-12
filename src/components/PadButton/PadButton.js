@@ -1,11 +1,19 @@
 import "./PadButton.scss";
 import { useRef } from "react";
 
-const PadButton = ({ drumStatus, text, source, keyCode }) => {
+const PadButton = ({
+	soundName,
+	setPressedKey,
+	drumStatus,
+	text,
+	source,
+	keyCode,
+}) => {
 	const ref = useRef();
 
 	const buttonTrigger = () => {
 		if (!drumStatus) return;
+		setPressedKey(soundName);
 		ref.current.play();
 	};
 

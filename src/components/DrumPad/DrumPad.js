@@ -1,7 +1,7 @@
 import "./DrumPad.scss";
 import PadButton from "../PadButton/PadButton";
 
-const DrumPad = ({ drumStatus, drumSet }) => {
+const DrumPad = ({ setPressedKey, drumStatus, drumSet }) => {
 	return (
 		<div className="pads">
 			{drumSet.drumsConfig.map((button) => {
@@ -12,6 +12,8 @@ const DrumPad = ({ drumStatus, drumSet }) => {
 						source={button.src}
 						keyCode={button.keyCode}
 						drumStatus={drumStatus}
+						setPressedKey={setPressedKey}
+						soundName={button.id}
 					/>
 				);
 			})}

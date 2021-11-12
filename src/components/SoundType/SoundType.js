@@ -1,8 +1,12 @@
 import "./SoundType.scss";
 
-const SoundType = ({ drumSet, setSoundType }) => {
+const SoundType = ({ setPressedKey, drumSet, setSoundType }) => {
+	const changeDisplay = () => {
+		setSoundType();
+		setPressedKey("");
+	};
 	return (
-		<button className="sounds" onClick={setSoundType}>
+		<button className="sounds" onClick={changeDisplay}>
 			{drumSet.activeDrumSet}
 		</button>
 	);

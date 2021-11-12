@@ -1,7 +1,11 @@
 import "./Display.scss";
 
-const Display = () => {
-	return <div id="display" className="display"></div>;
+const Display = ({ pressedKey }) => {
+	return (
+		<div id="display" className="display">
+			{pressedKey}
+		</div>
+	);
 };
 
 export default Display;
